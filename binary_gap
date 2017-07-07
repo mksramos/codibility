@@ -1,0 +1,17 @@
+def solution(N):
+    # write your code in Python 2.7
+    result = 0
+    bn = bin(N)[2:]
+    tokens = bn.split('1')
+    
+
+    if(bn[len(bn)-1] == '0'):
+        tokens.pop()
+
+  
+    for gap in tokens:
+        if(gap.count('0') > result):
+            result = gap.count('0')
+
+    return result
+    pass
